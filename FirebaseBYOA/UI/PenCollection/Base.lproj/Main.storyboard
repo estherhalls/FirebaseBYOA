@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fountain Pen Collection-->
+        <scene sceneID="SDH-7j-eV6">
+            <objects>
+                <tableViewController id="6dD-q8-Mwf" customClass="PenListTableViewController" customModule="FirebaseBYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Rm5-Sd-D2S">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="penCell" rowHeight="60" id="14x-co-OUz" customClass="penTableViewCell" customModule="MyFirstProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14x-co-OUz" id="Vzk-jh-9yK">
+                                    <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rZu-D4-1ZN">
+                                            <rect key="frame" x="20" y="11.333333333333332" width="311.66666666666669" height="37.666666666666671"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Pen Brand + Model)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fx1-70-VHp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="311.66666666666669" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="93c-e8-8O3">
+                                                    <rect key="frame" x="0.0" y="22" width="311.66666666666669" height="15.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="Nib Size &amp; Material:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noi-0I-wbi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Nib Size &amp; Material)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8b-Wo-DKh">
+                                                            <rect key="frame" x="126.66666666666666" y="0.0" width="184.99999999999997" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rZu-D4-1ZN" secondAttribute="trailing" constant="20" id="9jM-Xh-2f5"/>
+                                        <constraint firstItem="rZu-D4-1ZN" firstAttribute="leading" secondItem="Vzk-jh-9yK" secondAttribute="leading" constant="20" id="grz-jm-Lja"/>
+                                        <constraint firstItem="rZu-D4-1ZN" firstAttribute="centerY" secondItem="Vzk-jh-9yK" secondAttribute="centerY" id="r7A-8C-VkJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nibSizeMaterialLabel" destination="V8b-Wo-DKh" id="sXV-Oz-uFH"/>
+                                    <outlet property="penBrandModelNamesLabel" destination="fx1-70-VHp" id="Ep4-hW-VWV"/>
+                                    <segue destination="I70-Cq-znj" kind="show" identifier="toDetailVC" id="PP1-M5-3rC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6dD-q8-Mwf" id="7sV-M1-Lhi"/>
+                            <outlet property="delegate" destination="6dD-q8-Mwf" id="vEk-x4-xmO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fountain Pen Collection" id="nHZ-T6-EwO">
+                        <barButtonItem key="backBarButtonItem" title="All Pens" id="7Mz-O6-CXr"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tgg-z0-xpa">
+                            <connections>
+                                <segue destination="I70-Cq-znj" kind="show" id="ya8-4s-FlA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s46-Bw-1z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166.15384615384616" y="-34.123222748815166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CjX-yF-hME">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yKJ-Rv-15c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o0s-p0-Nfe">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6dD-q8-Mwf" kind="relationship" relationship="rootViewController" id="wmM-zl-UlM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTF-MQ-o1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="-34"/>
+        </scene>
+        <!--FountainPenDetail-->
+        <scene sceneID="lAl-hj-Kwr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FountainPenDetail" id="I70-Cq-znj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mlu-ru-tkq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgp-zr-RU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="-34"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PP1-M5-3rC"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

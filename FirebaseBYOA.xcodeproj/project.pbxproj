@@ -23,6 +23,7 @@
 		EBF0A2C12907570E00F85041 /* PenListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0A2C02907570E00F85041 /* PenListTableViewController.swift */; };
 		EBF0A2C32907576300F85041 /* PenDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0A2C22907576300F85041 /* PenDetailViewController.swift */; };
 		EBF0A2C6290757DC00F85041 /* PenListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0A2C5290757DC00F85041 /* PenListTableViewCell.swift */; };
+		EBF0A2C9290758CE00F85041 /* FountainPenDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF0A2C8290758CE00F85041 /* FountainPenDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		EBF0A2C02907570E00F85041 /* PenListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenListTableViewController.swift; sourceTree = "<group>"; };
 		EBF0A2C22907576300F85041 /* PenDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenDetailViewController.swift; sourceTree = "<group>"; };
 		EBF0A2C5290757DC00F85041 /* PenListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenListTableViewCell.swift; sourceTree = "<group>"; };
+		EBF0A2C8290758CE00F85041 /* FountainPenDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FountainPenDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,6 @@
 				EBF0A2C72907589000F85041 /* UI */,
 				EBF0A2AE29074DFB00F85041 /* Networking */,
 				EBF0A2AA29074D9D00F85041 /* Resources */,
-				EBF0A29C29074CE000F85041 /* Main.storyboard */,
 			);
 			path = FirebaseBYOA;
 			sourceTree = "<group>";
@@ -109,6 +110,7 @@
 		EBF0A2AC29074DD400F85041 /* PenCollection */ = {
 			isa = PBXGroup;
 			children = (
+				EBF0A29C29074CE000F85041 /* Main.storyboard */,
 				EBF0A2C02907570E00F85041 /* PenListTableViewController.swift */,
 			);
 			path = PenCollection;
@@ -117,6 +119,7 @@
 		EBF0A2AD29074DEA00F85041 /* PenDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EBF0A2C8290758CE00F85041 /* FountainPenDetail.storyboard */,
 				EBF0A2C22907576300F85041 /* PenDetailViewController.swift */,
 			);
 			path = PenDetail;
@@ -219,6 +222,7 @@
 				EBF0A2A329074CE100F85041 /* LaunchScreen.storyboard in Resources */,
 				EBF0A2B229074F5500F85041 /* GoogleService-Info.plist in Resources */,
 				EBF0A2A029074CE100F85041 /* Assets.xcassets in Resources */,
+				EBF0A2C9290758CE00F85041 /* FountainPenDetail.storyboard in Resources */,
 				EBF0A29E29074CE000F85041 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pen Details-->
+        <scene sceneID="J7H-Jf-kCG">
+            <objects>
+                <viewController id="c8f-yB-aim" customClass="PenDetailViewController" customModule="MyFirstProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7h7-Zp-oPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gtY-Cc-ElM">
+                                <rect key="frame" x="30" y="136" width="330" height="166"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0fN-W7-Ym3">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJr-g2-LNk">
+                                                <rect key="frame" x="0.0" y="0.0" width="94.666666666666671" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pilot..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wet-GF-qTc">
+                                                <rect key="frame" x="102.66666666666664" y="0.0" width="227.33333333333337" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="S67-s7-BES">
+                                        <rect key="frame" x="0.0" y="44" width="330" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-hy-6qZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vanishing Point..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnN-cV-4tP">
+                                                <rect key="frame" x="102.33333333333336" y="0.0" width="227.66666666666663" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="1EV-Qh-hA2">
+                                        <rect key="frame" x="0.0" y="88" width="330" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nib Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hus-e4-ORd">
+                                                <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EF..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdF-d8-H1g">
+                                                <rect key="frame" x="101.33333333333336" y="0.0" width="228.66666666666663" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BB4-U2-OsY">
+                                        <rect key="frame" x="0.0" y="132" width="330" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nib Material" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-mk-ch6">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="14k Gold..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-I4-TxE">
+                                                <rect key="frame" x="101.33333333333336" y="0.0" width="228.66666666666663" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C0F-oy-sli">
+                                <rect key="frame" x="50" y="352" width="290" height="35.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-OB-WNg">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="35.666666666666664"/>
+                                        <color key="tintColor" red="0.66987693739999998" green="0.73188962639999999" blue="0.72030738729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.66987693739999998" green="0.73188962639999999" blue="0.72030738729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="c8f-yB-aim" eventType="touchUpInside" id="TMS-Zl-Sk7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoC-XT-3Pf">
+                                        <rect key="frame" x="155" y="0.0" width="135" height="35.666666666666664"/>
+                                        <color key="tintColor" red="0.73188962639999999" green="0.33221996850000002" blue="0.20376693230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.73188962639999999" green="0.26411786729999998" blue="0.19021954199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="c8f-yB-aim" eventType="touchUpInside" id="vqu-HK-UXh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c40-Xp-vIl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gtY-Cc-ElM" firstAttribute="leading" secondItem="c40-Xp-vIl" secondAttribute="leading" constant="30" id="3Lf-ZN-4y5"/>
+                            <constraint firstItem="C0F-oy-sli" firstAttribute="leading" secondItem="c40-Xp-vIl" secondAttribute="leading" constant="50" id="827-04-D5G"/>
+                            <constraint firstItem="c40-Xp-vIl" firstAttribute="trailing" secondItem="C0F-oy-sli" secondAttribute="trailing" constant="50" id="8Ff-G1-5t4"/>
+                            <constraint firstItem="gtY-Cc-ElM" firstAttribute="top" secondItem="c40-Xp-vIl" secondAttribute="top" constant="45" id="8a4-ur-WlT"/>
+                            <constraint firstItem="C0F-oy-sli" firstAttribute="top" secondItem="gtY-Cc-ElM" secondAttribute="bottom" constant="50" id="MBE-5v-xpg"/>
+                            <constraint firstItem="c40-Xp-vIl" firstAttribute="trailing" secondItem="gtY-Cc-ElM" secondAttribute="trailing" constant="30" id="Z7g-HJ-Az4"/>
+                            <constraint firstItem="C0F-oy-sli" firstAttribute="centerX" secondItem="c40-Xp-vIl" secondAttribute="centerX" id="bu5-h4-bSy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pen Details" id="imI-cO-FBF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BqM-CK-jxH">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="c8f-yB-aim" id="Uwl-QI-Zv5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nibMaterialTextField" destination="f4g-I4-TxE" id="vHs-Ab-zlH"/>
+                        <outlet property="nibSizeTextField" destination="mdF-d8-H1g" id="Yrn-Fw-eIz"/>
+                        <outlet property="penBrandTextField" destination="Wet-GF-qTc" id="G1w-hf-bIY"/>
+                        <outlet property="penNameTextField" destination="QnN-cV-4tP" id="0O7-Zq-DCn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJy-so-toA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="-34"/>
+        </scene>
+        <!--Fountain Pen Collection-->
+        <scene sceneID="SDH-7j-eV6">
+            <objects>
+                <tableViewController id="6dD-q8-Mwf" customClass="PenListTableViewController" customModule="MyFirstProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Rm5-Sd-D2S">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="penCell" rowHeight="60" id="14x-co-OUz" customClass="penTableViewCell" customModule="MyFirstProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14x-co-OUz" id="Vzk-jh-9yK">
+                                    <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rZu-D4-1ZN">
+                                            <rect key="frame" x="20" y="11.333333333333332" width="311.66666666666669" height="37.666666666666671"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Pen Brand + Model)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fx1-70-VHp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="311.66666666666669" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="93c-e8-8O3">
+                                                    <rect key="frame" x="0.0" y="22" width="311.66666666666669" height="15.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="Nib Size &amp; Material:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noi-0I-wbi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Nib Size &amp; Material)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8b-Wo-DKh">
+                                                            <rect key="frame" x="126.66666666666666" y="0.0" width="184.99999999999997" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rZu-D4-1ZN" secondAttribute="trailing" constant="20" id="9jM-Xh-2f5"/>
+                                        <constraint firstItem="rZu-D4-1ZN" firstAttribute="leading" secondItem="Vzk-jh-9yK" secondAttribute="leading" constant="20" id="grz-jm-Lja"/>
+                                        <constraint firstItem="rZu-D4-1ZN" firstAttribute="centerY" secondItem="Vzk-jh-9yK" secondAttribute="centerY" id="r7A-8C-VkJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nibSizeMaterialLabel" destination="V8b-Wo-DKh" id="sXV-Oz-uFH"/>
+                                    <outlet property="penBrandModelNamesLabel" destination="fx1-70-VHp" id="Ep4-hW-VWV"/>
+                                    <segue destination="c8f-yB-aim" kind="show" identifier="toDetailVC" id="PP1-M5-3rC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6dD-q8-Mwf" id="7sV-M1-Lhi"/>
+                            <outlet property="delegate" destination="6dD-q8-Mwf" id="vEk-x4-xmO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fountain Pen Collection" id="nHZ-T6-EwO">
+                        <barButtonItem key="backBarButtonItem" title="All Pens" id="7Mz-O6-CXr"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tgg-z0-xpa">
+                            <connections>
+                                <segue destination="c8f-yB-aim" kind="show" id="ya8-4s-FlA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s46-Bw-1z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166.15384615384616" y="-34.123222748815166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CjX-yF-hME">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yKJ-Rv-15c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o0s-p0-Nfe">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6dD-q8-Mwf" kind="relationship" relationship="rootViewController" id="wmM-zl-UlM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTF-MQ-o1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="-34"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ya8-4s-FlA"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -20,6 +20,9 @@
 		EBF0A2BB2907500400F85041 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = EBF0A2BA2907500400F85041 /* FirebaseFunctions */; };
 		EBF0A2BD2907500400F85041 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EBF0A2BC2907500400F85041 /* FirebaseStorage */; };
 		EBF0A2BF290750B500F85041 /* FountainPen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0A2BE290750B500F85041 /* FountainPen.swift */; };
+		EBF0A2C12907570E00F85041 /* PenListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0A2C02907570E00F85041 /* PenListTableViewController.swift */; };
+		EBF0A2C32907576300F85041 /* PenDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0A2C22907576300F85041 /* PenDetailViewController.swift */; };
+		EBF0A2C6290757DC00F85041 /* PenListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0A2C5290757DC00F85041 /* PenListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		EBF0A2AF29074E1F00F85041 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		EBF0A2B129074F5500F85041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBF0A2BE290750B500F85041 /* FountainPen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FountainPen.swift; sourceTree = "<group>"; };
+		EBF0A2C02907570E00F85041 /* PenListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenListTableViewController.swift; sourceTree = "<group>"; };
+		EBF0A2C22907576300F85041 /* PenDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenDetailViewController.swift; sourceTree = "<group>"; };
+		EBF0A2C5290757DC00F85041 /* PenListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +77,9 @@
 			isa = PBXGroup;
 			children = (
 				EBF0A2B129074F5500F85041 /* GoogleService-Info.plist */,
-				EBF0A2AE29074DFB00F85041 /* Networking */,
-				EBF0A2AD29074DEA00F85041 /* FountainPenDetailView */,
-				EBF0A2AC29074DD400F85041 /* PenCollectionListView */,
 				EBF0A2AB29074DCD00F85041 /* Models */,
+				EBF0A2C72907589000F85041 /* UI */,
+				EBF0A2AE29074DFB00F85041 /* Networking */,
 				EBF0A2AA29074D9D00F85041 /* Resources */,
 				EBF0A29C29074CE000F85041 /* Main.storyboard */,
 			);
@@ -101,18 +106,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EBF0A2AC29074DD400F85041 /* PenCollectionListView */ = {
+		EBF0A2AC29074DD400F85041 /* PenCollection */ = {
 			isa = PBXGroup;
 			children = (
+				EBF0A2C02907570E00F85041 /* PenListTableViewController.swift */,
 			);
-			path = PenCollectionListView;
+			path = PenCollection;
 			sourceTree = "<group>";
 		};
-		EBF0A2AD29074DEA00F85041 /* FountainPenDetailView */ = {
+		EBF0A2AD29074DEA00F85041 /* PenDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EBF0A2C22907576300F85041 /* PenDetailViewController.swift */,
 			);
-			path = FountainPenDetailView;
+			path = PenDetail;
 			sourceTree = "<group>";
 		};
 		EBF0A2AE29074DFB00F85041 /* Networking */ = {
@@ -121,6 +128,24 @@
 				EBF0A2AF29074E1F00F85041 /* FirebaseService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		EBF0A2C42907579500F85041 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				EBF0A2C5290757DC00F85041 /* PenListTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		EBF0A2C72907589000F85041 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EBF0A2C42907579500F85041 /* CustomCell */,
+				EBF0A2AC29074DD400F85041 /* PenCollection */,
+				EBF0A2AD29074DEA00F85041 /* PenDetail */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF0A2C6290757DC00F85041 /* PenListTableViewCell.swift in Sources */,
 				EBF0A29729074CE000F85041 /* AppDelegate.swift in Sources */,
+				EBF0A2C32907576300F85041 /* PenDetailViewController.swift in Sources */,
 				EBF0A2B029074E1F00F85041 /* FirebaseService.swift in Sources */,
 				EBF0A29929074CE000F85041 /* SceneDelegate.swift in Sources */,
 				EBF0A2BF290750B500F85041 /* FountainPen.swift in Sources */,
+				EBF0A2C12907570E00F85041 /* PenListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

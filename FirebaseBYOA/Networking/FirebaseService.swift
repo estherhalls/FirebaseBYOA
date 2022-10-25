@@ -16,17 +16,17 @@ enum FirebaseError: Error {
 }
 /// Makes data SOLID rather than a concrete type - Dependency Inversion
 protocol FirebaseSyncable {
-    func save(fountainPen: FountainPen)
+    func save(_ fountainPen: FountainPen)
     func loadPens(completion: @escaping (Result<[FountainPen], FirebaseError>) -> Void)
-    func delete(fountainPen: FountainPen)
+    func delete(_ fountainPen: FountainPen)
 }
 
-struct FirebaseService {
+struct FirebaseService: FirebaseSyncable {
     
     let ref = Database.database().reference()
     
     /// Go back to model and create keys so we don't have to hard code
-    func save(fountainPen: FountainPen) {
+    func save(_ fountainPen: FountainPen) {
         /// UUID is what makes each entry unique, fountainPenData is what we named the unique dictionary representation of our model object on our model file
         ref.child(FountainPen.Key.collectionType).updateChildValues([fountainPen.uuid : fountainPen.fountainPenData])
     }
@@ -49,7 +49,7 @@ struct FirebaseService {
         }
     }
     
-    func delete(fountainPen: FountainPen) {
+    func delete(_ fountainPen: FountainPen) {
         ref.child(FountainPen.Key.collectionType).child(fountainPen.uuid).removeValue()
     }
     

@@ -14,6 +14,12 @@ enum FirebaseError: Error {
     case failedToUnwrapData
     case noDataFound
 }
+/// Makes data SOLID rather than a concrete type - Dependency Inversion
+protocol FirebaseSyncable {
+    func save(fountainPen: FountainPen)
+    func loadPens(completion: @escaping (Result<[FountainPen], FirebaseError>) -> Void)
+    func delete(fountainPen: FountainPen)
+}
 
 struct FirebaseService {
     
@@ -42,4 +48,9 @@ struct FirebaseService {
             completion(.success(pens))
         }
     }
-}// End of Struct
+    
+    func delete(fountainPen: FountainPen) {
+        ref.child(FountainPen.Key.collectionType).child(fountainPen.uuid).removeValue()
+    }
+    
+} // End of Struct

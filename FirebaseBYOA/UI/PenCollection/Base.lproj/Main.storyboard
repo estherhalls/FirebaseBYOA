@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="penCell" rowHeight="60" id="14x-co-OUz" customClass="penTableViewCell" customModule="MyFirstProject" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="penCell" rowHeight="60" id="14x-co-OUz" customClass="penTableViewCell" customModule="FirebaseBYOA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14x-co-OUz" id="Vzk-jh-9yK">
@@ -59,8 +59,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nibSizeMaterialLabel" destination="V8b-Wo-DKh" id="sXV-Oz-uFH"/>
-                                    <outlet property="penBrandModelNamesLabel" destination="fx1-70-VHp" id="Ep4-hW-VWV"/>
+                                    <outlet property="nibSizeMaterialLabel" destination="V8b-Wo-DKh" id="bNi-ys-sx9"/>
+                                    <outlet property="penBrandModelNamesLabel" destination="fx1-70-VHp" id="bbH-F4-QzG"/>
                                     <segue destination="I70-Cq-znj" kind="show" identifier="toDetailVC" id="PP1-M5-3rC"/>
                                 </connections>
                             </tableViewCell>

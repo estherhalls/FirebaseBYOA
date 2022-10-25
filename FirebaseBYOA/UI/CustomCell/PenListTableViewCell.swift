@@ -8,16 +8,15 @@
 import UIKit
 
 class PenListTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+// MARK: - Outlets
+    @IBOutlet weak var penBrandModelNamesLabel: UILabel!
+    @IBOutlet weak var nibSizeMaterialLabel: UILabel!
+    
+    // MARK: - Methods
+    func configureCell(with pen: FountainPen) {
+        penBrandModelNamesLabel.text = "\(pen.brandName) \(pen.penName)"
+        nibSizeMaterialLabel.text = "\(pen.nibSize), \(pen.nibMaterial)"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-}
+    
+} // End of Class

@@ -12,12 +12,11 @@ class FountainPen: Codable {
     // MARK: - Keys
     enum Key {
         static let collectionType = "pens"
-        static let penName = "Pen Name"
-        static let brandName = "Brand Name"
-        static let nibMaterial = "Nib Material"
-        static let nibSize = "Nib Size"
+        static let penName = "pen_name"
+        static let brandName = "brand_name"
+        static let nibMaterial = "nib_material"
+        static let nibSize = "nib_size"
         static let uuid = "uuid"
-        static let isFavorite = "favorite"
     }
     
     // MARK: - Properties
@@ -30,11 +29,11 @@ class FountainPen: Codable {
     // Dictionary Representation of Model Object
     /// Used as value for child dictionary in save fountain pen function on FirebaseService file
     var fountainPenData: [String:AnyHashable] {
-        [penName : self.penName,
-       brandName : self.brandName,
-     nibMaterial : self.nibMaterial,
-         nibSize : self.nibSize,
-            uuid : self.uuid
+        [Key.penName : self.penName,
+         Key.brandName : self.brandName,
+         Key.nibMaterial : self.nibMaterial,
+         Key.nibSize : self.nibSize,
+         Key.uuid : self.uuid
         ]
     }
     

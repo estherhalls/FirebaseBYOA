@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c8f-yB-aim">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,13 +11,13 @@
         <!--Pen Details-->
         <scene sceneID="J7H-Jf-kCG">
             <objects>
-                <viewController id="c8f-yB-aim" customClass="PenDetailViewController" customModule="MyFirstProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c8f-yB-aim" customClass="PenDetailViewController" customModule="FirebaseBYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7h7-Zp-oPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gtY-Cc-ElM">
-                                <rect key="frame" x="30" y="136" width="330" height="166"/>
+                                <rect key="frame" x="30" y="92" width="330" height="166"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0fN-W7-Ym3">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
@@ -43,7 +44,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vanishing Point..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnN-cV-4tP">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vanishing Point..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnN-cV-4tP" userLabel="Pen Name Text Field">
                                                 <rect key="frame" x="102.33333333333336" y="0.0" width="227.66666666666663" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -85,7 +86,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C0F-oy-sli">
-                                <rect key="frame" x="50" y="352" width="290" height="35.666666666666686"/>
+                                <rect key="frame" x="50" y="308" width="290" height="35.666666666666686"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-OB-WNg">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="35.666666666666664"/>
@@ -98,7 +99,7 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="clearButtonTapped:" destination="c8f-yB-aim" eventType="touchUpInside" id="TMS-Zl-Sk7"/>
+                                            <action selector="clearButtonTapped:" destination="c8f-yB-aim" eventType="touchUpInside" id="aCf-Ih-s6U"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoC-XT-3Pf">
@@ -112,7 +113,7 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="deleteButtonTapped:" destination="c8f-yB-aim" eventType="touchUpInside" id="vqu-HK-UXh"/>
+                                            <action selector="deleteButtonTapped:" destination="c8f-yB-aim" eventType="touchUpInside" id="gQK-A3-kc2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -133,15 +134,15 @@
                     <navigationItem key="navigationItem" title="Pen Details" id="imI-cO-FBF">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="BqM-CK-jxH">
                             <connections>
-                                <action selector="saveButtonTapped:" destination="c8f-yB-aim" id="Uwl-QI-Zv5"/>
+                                <action selector="saveButtonTapped:" destination="c8f-yB-aim" id="eKt-Ye-KEZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="nibMaterialTextField" destination="f4g-I4-TxE" id="vHs-Ab-zlH"/>
-                        <outlet property="nibSizeTextField" destination="mdF-d8-H1g" id="Yrn-Fw-eIz"/>
-                        <outlet property="penBrandTextField" destination="Wet-GF-qTc" id="G1w-hf-bIY"/>
-                        <outlet property="penNameTextField" destination="QnN-cV-4tP" id="0O7-Zq-DCn"/>
+                        <outlet property="penBrandNameTextField" destination="Wet-GF-qTc" id="1iK-I3-6Cw"/>
+                        <outlet property="penNameTextField" destination="QnN-cV-4tP" id="aNu-z9-PHZ"/>
+                        <outlet property="penNibMaterialTextField" destination="f4g-I4-TxE" id="kbr-Ds-quk"/>
+                        <outlet property="penNibSizeTextField" destination="mdF-d8-H1g" id="A4l-p3-6qa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJy-so-toA" sceneMemberID="firstResponder"/>

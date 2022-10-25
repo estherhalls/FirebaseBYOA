@@ -10,6 +10,7 @@ import UIKit
 class PenListTableViewCell: UITableViewCell {
     
 // MARK: - Outlets
+    
     @IBOutlet weak var penBrandModelNamesLabel: UILabel!
     @IBOutlet weak var nibSizeMaterialLabel: UILabel!
     

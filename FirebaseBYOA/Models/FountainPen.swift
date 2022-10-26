@@ -17,6 +17,7 @@ class FountainPen: Codable {
         static let nibMaterial = "nib_material"
         static let nibSize = "nib_size"
         static let uuid = "uuid"
+        static let entryDate = "date"
     }
     
     // MARK: - Properties
@@ -25,6 +26,7 @@ class FountainPen: Codable {
     var nibMaterial: String
     var nibSize: String
     let uuid: String
+    var entryDate: Date
     
     // Dictionary Representation of Model Object
     /// Used as value for child dictionary in save fountain pen function on FirebaseService file
@@ -33,17 +35,19 @@ class FountainPen: Codable {
          Key.brandName : self.brandName,
          Key.nibMaterial : self.nibMaterial,
          Key.nibSize : self.nibSize,
-         Key.uuid : self.uuid
+         Key.uuid : self.uuid,
+         Key.entryDate : self.entryDate.timeIntervalSince1970
         ]
     }
     
     // MARK: - Designated Initializer
-    init(penName: String, brandName: String, nibMaterial: String, nibSize: String, uuid: String = UUID().uuidString) {
+    init(penName: String, brandName: String, nibMaterial: String, nibSize: String, uuid: String = UUID().uuidString, entryDate: Date = Date()) {
         self.penName = penName
         self.brandName = brandName
         self.nibMaterial = nibMaterial
         self.nibSize = nibSize
         self.uuid = uuid
+        self.entryDate = entryDate
     }
     
 } // End of Class
@@ -56,10 +60,11 @@ extension FountainPen {
               let brandName = dictionary[Key.brandName] as? String,
               let nibMaterial = dictionary[Key.nibMaterial] as? String,
               let nibSize = dictionary[Key.nibSize] as? String,
-              let uuid = dictionary[Key.uuid] as? String
+              let uuid = dictionary[Key.uuid] as? String,
+              let entryDate = dictionary[Key.entryDate] as? Double
         else {return nil}
         
-        self.init(penName: penName, brandName: brandName, nibMaterial: nibMaterial, nibSize: nibSize, uuid: uuid)
+        self.init(penName: penName, brandName: brandName, nibMaterial: nibMaterial, nibSize: nibSize, uuid: uuid, entryDate: Date(timeIntervalSince1970: entryDate))
     }
 }
 /// Allows us to individually identify cells to select and delete

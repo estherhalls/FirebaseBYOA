@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseFirestore
 
 /// May be it's own file if you want to abstract further. Must be outside of FirebaseService struct
 enum FirebaseError: Error {
@@ -23,34 +23,35 @@ protocol FirebaseSyncable {
 
 struct FirebaseService: FirebaseSyncable {
     
-    let ref = Database.database().reference()
+    let ref = Firestore.firestore()
     
     /// Go back to model and create keys so we don't have to hard code
     func save(_ fountainPen: FountainPen) {
         /// UUID is what makes each entry unique, fountainPenData is what we named the unique dictionary representation of our model object on our model file
-        ref.child(FountainPen.Key.collectionType).updateChildValues([fountainPen.uuid : fountainPen.fountainPenData])
+        ref.collection(FountainPen.Key.collectionType).document(fountainPen.uuid).setData(fountainPen.fountainPenData)
     }
     
     func loadPens(completion: @escaping (Result<[FountainPen], FirebaseError>) -> Void) {
-        ref.child(FountainPen.Key.collectionType).getData { error, snapshot in
+        ref.collection(FountainPen.Key.collectionType).getDocuments { snapshot, error in
             if let error {
                 print(error.localizedDescription)
                 completion(.failure(.firebaseError(error)))
                 return
             }
-            guard let data = snapshot?.value as? [String: [String:Any]] else {
+            guard let data = snapshot?.documents else {
                 completion(.failure(.failedToUnwrapData))
                 return
             }
             /// Go back to model and create failable initializer so we can use .compactMap
-            let dataArray = Array(data.values)
+            let dataArray = data.compactMap ({ $0.data()})
             let pens = dataArray.compactMap({FountainPen(fromDictionary: $0)})
+            let sortedPens = pens.sorted(by: {$0.entryDate > $1.entryDate})
             completion(.success(pens))
         }
     }
     
     func delete(_ fountainPen: FountainPen) {
-        ref.child(FountainPen.Key.collectionType).child(fountainPen.uuid).removeValue()
+        ref.collection(FountainPen.Key.collectionType).document(fountainPen.uuid).delete()
     }
     
 } // End of Struct
